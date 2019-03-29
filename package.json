@@ -3,15 +3,20 @@
     "version": "1.0.0",
     "description": "We've made danker memes with fewer likes.",
     "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
     "engines": {
-        "node": "^8"
+        "node": ">=8"
     },
     "dependencies": {
-        "botkit": "^0.7.4",
-        "botkit-storage-mongo": "^1.0.2",
-        "mongodb": "^1.4.39"
+        "googleapis": "^38.0.0"
+    },
+    "devDependencies": {
+        "@google-cloud/nodejs-repo-tools": "^3.0.0",
+        "mocha": "^6.0.0",
+        "proxyquire": "^2.1.0",
+        "sinon": "^7.2.7"
+    },
+    "cloud-repo-tools": {
+        "requiresKeyFile": true,
+        "requiresProjectId": true
     }
 }
