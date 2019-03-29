@@ -1,16 +1,16 @@
-export const verbed = [
+const verbed = [
     'made',
 ];
-export const greater = [
+const greater = [
     'danker',
 ];
-export const objects = [
+const objects = [
     'memes',
 ];
-export const fewer = [
+const fewer = [
     'fewer',
 ];
-export const indirectObjects = [
+const indirectObjects = [
     'likes',
 ];
 
@@ -18,10 +18,19 @@ function rand(words) {
     return words[Math.floor(Math.random() * words.length)];
 }
 
-export default function inspiration (predicate = "") {
-    if (predicate === "") {
-        return `We've ${rand(verbed)} ${rand(greater)} ${rand(objects)} with ${rand(fewer)} ${rand(indirectObjects)}.`;
-    } else {
-        return `We've ${predicate}.`;
-    }
+module.exports = {
+    words: {
+        verbed: verbed,
+        greater: greater,
+        objects: objects,
+        fewer: fewer,
+        indirectObjects: indirectObjects,
+    },
+    say: function (predicate = "") {
+        if (predicate === "") {
+            return `We've ${rand(verbed)} ${rand(greater)} ${rand(objects)} with ${rand(fewer)} ${rand(indirectObjects)}.`;
+        } else {
+            return `We've ${predicate}.`;
+        }
+    },
 };

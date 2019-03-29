@@ -1,8 +1,7 @@
 'use strict';
 
-import inspiration from 'TheMindOfAGustin';
-
 const config = require('./config.json');
+const inspiration = require('./TheMindOfAGustin');
 
 function formatSlackMessage(query, response) {
     let entity;
@@ -63,7 +62,7 @@ function verifyWebhook(body) {
 
 function justInspire(predicate = "") {
     return new Promise((resolve, reject) => {
-        resolve(formatSlackMessage(predicate, inspiration(predicate)));
+        resolve(formatSlackMessage(predicate, inspiration.say(predicate)));
     });
 }
 
