@@ -1,6 +1,6 @@
 {
     "name": "justinspire",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "We've made danker memes with fewer likes.",
     "main": "index.js",
     "engines": {

@@ -9,16 +9,11 @@ const inspiration = require('./TheMindOfAGustin');
  * @returns {number}
  */
 function formatSlackMessage(message) {
-    const slackMessage = {
+    return {
         response_type: 'in_channel',
         text: message,
         attachments: [],
     };
-
-    // formatting goes here
-    return slackMessage.attachments.push({
-        text: message,
-    });
 }
 
 function verifyWebhook(body) {
