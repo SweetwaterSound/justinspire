@@ -1,34 +1,20 @@
-const verbed = [
-    'made',
-];
-const greater = [
-    'danker',
-];
-const objects = [
-    'memes',
-];
-const fewer = [
-    'fewer',
-];
-const indirectObjects = [
-    'likes',
-];
+const vocabulary = require("./TheVocabularyOfAGustin");
 
 function rand(words) {
     return words[Math.floor(Math.random() * words.length)];
 }
 
 module.exports = {
-    words: {
-        verbed: verbed,
-        greater: greater,
-        objects: objects,
-        fewer: fewer,
-        indirectObjects: indirectObjects,
-    },
+    words: vocabulary.words,
     say: function (predicate = "") {
         if (predicate === "") {
-            return `We've ${rand(verbed)} ${rand(greater)} ${rand(objects)} with ${rand(fewer)} ${rand(indirectObjects)}.`;
+            let verbed = rand(vocabulary.words.verbed);
+            let greater = rand(vocabulary.words.greater);
+            let objects = rand(vocabulary.words.objects);
+            let lesser = rand(vocabulary.words.lesser);
+            let indirectObjects = rand(vocabulary.words.indirectObjects);
+
+            return `We've ${verbed} ${greater} ${objects} with ${lesser} ${indirectObjects}.`;
         } else {
             return `We've ${predicate}.`;
         }
