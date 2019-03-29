@@ -1,0 +1,17 @@
+{
+    "name": "justinspire",
+    "version": "1.0.0",
+    "description": "We've made danker memes with fewer likes.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "engines": {
+        "node": "^8"
+    },
+    "dependencies": {
+        "botkit": "^0.7.4",
+        "botkit-storage-mongo": "^1.0.2",
+        "mongodb": "^1.4.39"
+    }
+}
