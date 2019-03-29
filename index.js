@@ -1,6 +1,5 @@
 'use strict';
 
-const config = require('./config.json');
 const inspiration = require('./TheMindOfAGustin');
 
 function formatSlackMessage(query, response) {
@@ -53,7 +52,7 @@ function formatSlackMessage(query, response) {
 }
 
 function verifyWebhook(body) {
-    if (! body || body.token !== config.SLACK_TOKEN) {
+    if (! body || body.token !== process.env.SLACK_TOKEN) {
         const error = new Error('Invalid credentials');
         error.code = 401;
         throw error;
